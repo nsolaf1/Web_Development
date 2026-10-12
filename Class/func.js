@@ -12,7 +12,9 @@
 
 
 function multi(x,y){
+    console.log("hello World");
     return x * y; 
+    
 }
 function div(x,y){
     return x / y; 
