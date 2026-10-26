@@ -1,100 +1,82 @@
-# 🧠 Модульные Вопросы — Подготовка к Тесту
+##Two Sum
 
-## 📅 Назначение
+https://leetcode.com/problems/two-sum/
 
-Данный модуль предназначен для подготовки к **контрольной работе** по программированию.  
-Студенты должны изучить и самостоятельно решить **все 5 заданий** с платформы [LeetCode](https://leetcode.com/).  
-На тесте преподаватель выберет **2 случайных задачи из 5**, каждая из которых оценивается в **50 баллов (всего 100 баллов).**
+var twoSum = function(nums, target) {
+        // 1. Iterate over every possible number pair
+        for (let i = 0; i < nums.length; i++) {
+            // j is always ahead of i so that we don't re-evaluate already evaluated sums
+            for (let j = i + 1; j < nums.length; j++) {
+                // 2. Check if a given pair adds up to our target
+                if (nums[i] + nums[j] == target) {
+                    // Return the indices when a pair has been found
+                    return [i, j];
+                }
+            }
+        }
+};
 
----
+## 2 Number Palindrom
+https://leetcode.com/problems/palindrome-number/
+var isPalindrome = function(x) {
 
-## 🧩 Список задач
+    if( x < 0 ) return false;
 
-### 1. [Fizz Buzz](http://leetcode.com/problems/fizz-buzz/)
+    let original = x;
+    let reversed = 0;
 
-**Навыки:** циклы, условия, оператор `%`  
-**Задача:**  
-Вывести числа от `1` до `n`, заменяя:
+    while( x > 0) {
+        let LastDigit = x % 10;
+        reversed = ( reversed * 10 ) + LastDigit;
+        x = Math.floor( x / 10 );
+    }
 
-- кратные 3 → `Fizz`,
-- кратные 5 → `Buzz`,
-- кратные и 3, и 5 → `FizzBuzz`.
+   return original === reversed;
 
-**Что отработать:** простая логика, использование циклов и условий.
 
----
+## 3 Remove Element
+https://leetcode.com/problems/remove-element/description/
 
-### 2. [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/description/)
+   var removeElement = function(nums, val) {
+    let i = 0;
+    for (let j = 0; j < nums.length; j++) {
+        if (nums[j] !== val) {
+            nums[i] = nums[j];
+            i++;
+        }
+    }
+    return i;
+};
 
-**Навыки:** двумерные массивы, работа с циклами и суммами.  
-**Задача:**  
-Дан список счетов клиентов (матрица). Найдите наибольшее значение суммы строк (богатейшего клиента).
+## 4 Remove Duplicates
+https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 
-**Что отработать:** вложенные циклы, обработка матриц.
 
----
+var removeDuplicates = function(nums) {
+    let index = 1;
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i] !== nums[i - 1]) {
+            nums[index] = nums[i];
+            index++;
+        }
+    }
+    return index;
+};
 
-### 3. [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
+## 5 Remove Element
+https://leetcode.com/problems/remove-element/
 
-**Навыки:** связные списки, работа с указателями, перенос остатка (carry).  
-**Задача:**  
-Сложить два числа, представленные в виде **связных списков** в обратном порядке (каждый узел — одна цифра).  
-Вернуть результат также в виде связного списка.
+var removeElement = function(nums, val) {
 
-**Что отработать:**
+    let k = 0;
 
-- создание и обход связных списков
-- арифметику с переносом
-- работу с памятью (для языков C/C++)
+    for(let i = 0; i < nums.length; i++){
 
----
+        if(nums[i] !== val){
+            nums[k] = nums[i];
+            k++;
+        }
+    }
 
-### 4. [Sqrt(x)](https://leetcode.com/problems/sqrtx/)
-
-**Навыки:** бинарный поиск, математика.  
-**Задача:**  
-Найти целую часть квадратного корня числа `x` без использования встроенных функций.
-
-**Что отработать:**
-
-- применение бинарного поиска
-- анализ точности и производительности алгоритма.
-
----
-
-### 5. [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
-
-**Навыки:** связные списки, обработка дубликатов.  
-**Задача:**  
-Удалить все повторяющиеся элементы из **отсортированного связного списка**, чтобы каждое значение встречалось только один раз.
-
-**Что отработать:**
-
-- работа с указателями
-- изменение структуры списка без создания нового.
-
----
-
-## 🧮 Оценивание
-
-| Количество задач   | Баллы                     |
-| ------------------ | ------------------------- |
-| 2 случайные задачи | 100 баллов (по 50 каждая) |
-
----
-
-## 💡 Рекомендации для подготовки
-
-- Проработайте все 5 задач, даже если на тесте будут только 2.
-- Для каждой задачи разберите:
-  - Условие задачи
-  - Примеры входных и выходных данных
-  - Время и память (time/space complexity)
-- Протестируйте своё решение на нескольких примерах.
-- Повторите основы:
-  - циклы `for`, `while`
-  - условия `if / else`
-  - списки и массивы
-  - функции и возврат значений
-
----
+    return k;
+};
