@@ -1,8 +1,8 @@
-##Two Sum
+## Two Sum
 
 https://leetcode.com/problems/two-sum/
 
-
+```
 var twoSum = function(nums, target) {
     const numMap = new Map();
     for (let i = 0; i < nums.length; i++) {
@@ -13,6 +13,7 @@ var twoSum = function(nums, target) {
         numMap.set(nums[i], i);
     }
 };
+```
 
 ## 2 Number Palindrom
 https://leetcode.com/problems/palindrome-number/
