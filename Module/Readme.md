@@ -17,6 +17,7 @@ var twoSum = function(nums, target) {
 
 ## 2 Number Palindrom
 https://leetcode.com/problems/palindrome-number/
+```
 var isPalindrome = function(x) {
 
     if( x < 0 ) return false;
@@ -32,9 +33,11 @@ var isPalindrome = function(x) {
 
    return original === reversed;
 
-
+```
 ## 3 Remove Element
 https://leetcode.com/problems/remove-element/description/
+
+```
 
    var removeElement = function(nums, val) {
     let i = 0;
@@ -47,10 +50,11 @@ https://leetcode.com/problems/remove-element/description/
     return i;
 };
 
+```
 ## 4 Remove Duplicates
 https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 
-
+```
 var removeDuplicates = function(nums) {
     let index = 1;
     for (let i = 1; i < nums.length; i++) {
@@ -61,10 +65,10 @@ var removeDuplicates = function(nums) {
     }
     return index;
 };
-
+```
 ## 5 Remove Element
 https://leetcode.com/problems/remove-element/
-
+```
 var removeElement = function(nums, val) {
 
     let k = 0;
@@ -79,3 +83,4 @@ var removeElement = function(nums, val) {
 
     return k;
 };
+```
