@@ -11,9 +11,14 @@ const cars = ["BMW", "YOYOTA", "Lexus", "Honda", "FIT"];
 //     }
     
 // }
-let num = 3; 
-for(let i = 1; i <= 10; i++ ){
-  console.log(`${num} x ${i} = ${num*i}`);
-}
+// let num = 3; 
+// for(let i = 1; i <= 10; i++ ){
+//   console.log(`${num} x ${i} = ${num*i}`);
+// }
+
+let arr = [1,2,3,4,5,6];
+
+let doubleNum = arr.map(num => num + 5 );
+console.log(doubleNum)
 
 
