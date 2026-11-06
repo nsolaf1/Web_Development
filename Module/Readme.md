@@ -47,8 +47,8 @@ var isPalindrome = function(x) {
    return original === reversed;
 
 ``` -->
-## 3 Remove Element
-https://leetcode.com/problems/remove-element/description/
+<!-- ## 3 Remove Element
+https://leetcode.com/problems/remove-element/description/ -->
 
 <!-- ```
 
@@ -78,8 +78,8 @@ var removeDuplicates = function(nums) {
     return index;
 };
 ``` -->
-## 5 Remove Element
-https://leetcode.com/problems/remove-element/
+<!-- ## 5 Remove Element
+https://leetcode.com/problems/remove-element/ -->
 <!-- 
 ```
 var removeElement = function(nums, val) {
