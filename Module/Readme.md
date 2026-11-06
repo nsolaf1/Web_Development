@@ -1,19 +1,19 @@
 # Variant 1:
-## 2 Number Palindrom
+
 https://leetcode.com/problems/palindrome-number/
-## 4 Remove Duplicates
+
 https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 
 # Variant 2:
-## Two Sum
+
 https://leetcode.com/problems/two-sum/
-## 3 Remove Element
+
 https://leetcode.com/problems/remove-element/description/
 
 # Variant 3:
-## 5 Remove Element
+
 https://leetcode.com/problems/remove-element/
-## 4 Remove Duplicates
+
 https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 
 <!-- ```
